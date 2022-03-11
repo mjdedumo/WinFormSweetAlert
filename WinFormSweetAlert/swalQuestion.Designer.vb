@@ -30,6 +30,7 @@ Partial Class swalQuestion
         Me.lblQuestion = New System.Windows.Forms.Label()
         Me.GunaNo = New Guna.UI.WinForms.GunaAdvenceButton()
         Me.lblSubQuestion = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -50,7 +51,7 @@ Partial Class swalQuestion
         Me.GunaYes.CheckedImage = CType(resources.GetObject("GunaYes.CheckedImage"), System.Drawing.Image)
         Me.GunaYes.CheckedLineColor = System.Drawing.Color.DimGray
         Me.GunaYes.DialogResult = System.Windows.Forms.DialogResult.Yes
-        Me.GunaYes.FocusedColor = System.Drawing.Color.Empty
+        Me.GunaYes.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.GunaYes.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold)
         Me.GunaYes.ForeColor = System.Drawing.Color.White
         Me.GunaYes.Image = Nothing
@@ -103,7 +104,7 @@ Partial Class swalQuestion
         Me.GunaNo.CheckedImage = CType(resources.GetObject("GunaNo.CheckedImage"), System.Drawing.Image)
         Me.GunaNo.CheckedLineColor = System.Drawing.Color.DimGray
         Me.GunaNo.DialogResult = System.Windows.Forms.DialogResult.No
-        Me.GunaNo.FocusedColor = System.Drawing.Color.Empty
+        Me.GunaNo.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(212, Byte), Integer), CType(CType(212, Byte), Integer), CType(CType(212, Byte), Integer))
         Me.GunaNo.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold)
         Me.GunaNo.ForeColor = System.Drawing.Color.Black
         Me.GunaNo.Image = Nothing
@@ -133,6 +134,11 @@ Partial Class swalQuestion
         Me.lblSubQuestion.Text = "Are you sure ?"
         Me.lblSubQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 25
+        '
         'swalQuestion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -146,6 +152,7 @@ Partial Class swalQuestion
         Me.Controls.Add(Me.GunaYes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "swalQuestion"
+        Me.Opacity = 0.3R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "swal"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -159,4 +166,5 @@ Partial Class swalQuestion
     Friend WithEvents lblQuestion As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents GunaYes As Guna.UI.WinForms.GunaAdvenceButton
+    Friend WithEvents Timer1 As Timer
 End Class

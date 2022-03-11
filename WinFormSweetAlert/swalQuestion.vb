@@ -19,4 +19,12 @@
         DialogResult = vbYes
         Me.Dispose()
     End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If Opacity < 1 Then
+            Opacity += 0.1
+        Else
+            Opacity = 1
+        End If
+    End Sub
 End Class
